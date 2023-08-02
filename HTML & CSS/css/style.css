@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Porto';
+    src: url('../fonts/Porto\ 400.woff') format('woff');
+    src: url('../fonts/Porto\ 400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --bg-color: #2B2E4A;
+    --txt-color: #EEEEEE;
+    --txt-accent-color: #E84545;
+    --txt-alternate-color: #5FA8D3;
+    --txt-font: 'Porto', sans-serif;
+
+    --header-width: 270px;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--txt-font);
+    color: var(--txt-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--header-width);
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 32px;
+    border-right: 2px solid rgba(225, 225, 225, .1);
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: translateX(0);
+}
+
+main {
+    margin-left: var(--header-width);
+    transition: all .3s ease-in-out;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+#home .perfil-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    z-index: 1;
+}
+
+#home .perfil-info .perfil-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#home .perfil-info .name {
+    font-size: 24px;
+}
+
+#home .perfil-info .name strong {
+    color: var(--txt-accent-color);
+}
+
+#home .perfil-info .description {
+    color: var(--txt-alternate-color);
+}
+
+#home .perfil-info .social-icons .icon {
+    width: 50px;
+    height: 50px;
+}
+
+#home .contact-me {
+    background-color: var(--txt-alternate-color);
+    color: var(--txt-accent-color);
+    padding: 16px 24px;
+    border: 2px solid var(--txt-accent-color);
+    border-radius: 25px;
+    transition: all .3s ease-in-out;
+}
+
+#home .contact-me:hover {
+    background-color: var(--txt-accent-color);
+    color: var(--txt-alternate-color);
+    transition: all .3s ease-in-out;
+}
+
+#home .parallax {
+    position: absolute;
+    left: var(--header-width);
+    top: 0;
+    height: 100vh;
+    width: calc(100vw - var(--header-width));
+}
+
+#home .parallax .layer {
+    position: absolute;
+}
+
+#home .parallax .p1 {
+    left: 10%;
+    top: 10%;
+}
+
+#home .parallax .p2 {
+    left: 25%;
+    top: 30%;
+}
+
+#home .parallax .p3 {
+    left: 15%;
+    bottom: 30%;
+}
+
+#home .parallax .p4 {
+    left: 10%;
+    bottom: 10%;
+}
+
+#home .parallax .p5 {
+    left: 45%;
+    top: 10%;
+}
+
+#home .parallax .p6 {
+    left: 40%;
+    bottom: 10%;
+}
+
+#home .parallax .p7 {
+    top: 20%;
+    right: 30%;
+}
+
+#home .parallax .p8 {
+    right: 30%;
+    bottom: 20%;
+}
+
+#home .parallax .p9 {
+    right: 10%;
+    top: 10%;
+}
+
+#home .parallax .p10 {
+    top: 45%;
+    right: 20%;
+}
+
+#home .parallax .p11 {
+    bottom: 10%;
+    right: 10%;
+}
