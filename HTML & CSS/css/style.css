@@ -1,3 +1,22 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+
+@import url("./parallax.css");
+
+*::-webkit-scrollbar {
+    width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #2b2e4a;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #e84545;
+    border-radius: 10px;
+    border: 3.5px solid #2b2e4a;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -17,31 +36,64 @@
     --txt-alternate-color: #5FA8D3;
     --txt-font: 'Porto', sans-serif;
 
-    --header-width: 270px;
+    --header-width: 250px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: .8em;
 }
 
 body {
     background-color: var(--bg-color);
     font-family: var(--txt-font);
     color: var(--txt-color);
+    overflow-x: hidden;
 }
 
 header {
     position: fixed;
     top: 0;
     left: 0;
-    width: var(--header-width);
+    width: auto;
     height: 100vh;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 32px;
     border-right: 2px solid rgba(225, 225, 225, .1);
     z-index: 1;
     overflow-y: auto;
     overflow-x: hidden;
     transform: translateX(0);
+}
+
+header .logo {
+    width: 150px;
+}
+
+header .menu .list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header .menu .list .item a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--txt-color);
+}
+
+header .copyright {
+    font-size: small;
+    color: #A9A9A9;
 }
 
 main {
@@ -58,7 +110,7 @@ main {
     min-height: 100vh;
 }
 
-#home .perfil-info {
+#home .home-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,26 +119,26 @@ main {
     z-index: 1;
 }
 
-#home .perfil-info .perfil-image {
+#home .home-info .home-image {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-#home .perfil-info .name {
+#home .home-info .name {
     font-size: 24px;
 }
 
-#home .perfil-info .name strong {
+#home .home-info .name strong {
     color: var(--txt-accent-color);
 }
 
-#home .perfil-info .description {
+#home .home-info .description {
     color: var(--txt-alternate-color);
 }
 
-#home .perfil-info .social-icons .icon {
+#home .home-info .social-icons .icon {
     width: 50px;
     height: 50px;
 }
@@ -102,73 +154,55 @@ main {
 
 #home .contact-me:hover {
     background-color: var(--txt-accent-color);
-    color: var(--txt-alternate-color);
+    color: var(--txt-color);
     transition: all .3s ease-in-out;
 }
 
-#home .parallax {
-    position: absolute;
-    left: var(--header-width);
-    top: 0;
-    height: 100vh;
-    width: calc(100vw - var(--header-width));
+#about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
 }
 
-#home .parallax .layer {
-    position: absolute;
+section div h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
 }
 
-#home .parallax .p1 {
-    left: 10%;
-    top: 10%;
+section div h1::first-letter {
+    font-size: 54px;
+    font-weight: bold;
+    color: var(--txt-accent-color);
 }
 
-#home .parallax .p2 {
-    left: 25%;
-    top: 30%;
+#about-me .about-info .resume {
+    display: flex;
+    align-items: center;
+    gap: 54px;
 }
 
-#home .parallax .p3 {
-    left: 15%;
-    bottom: 30%;
+#about-me .about-info .resume p {
+    background-color: #353353;
+    padding: 28px;
+    text-align: justify;
+    line-height: 1.5;
+    border-radius: 25px;
 }
 
-#home .parallax .p4 {
-    left: 10%;
-    bottom: 10%;
+#about-me .about-info .resume p::first-letter {
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--txt-accent-color);
 }
 
-#home .parallax .p5 {
-    left: 45%;
-    top: 10%;
+#about-me .about-info .resume p strong {
+    font-weight: bold;
+    color: var(--txt-alternate-color);
 }
 
-#home .parallax .p6 {
-    left: 40%;
-    bottom: 10%;
-}
-
-#home .parallax .p7 {
-    top: 20%;
-    right: 30%;
-}
-
-#home .parallax .p8 {
-    right: 30%;
-    bottom: 20%;
-}
-
-#home .parallax .p9 {
-    right: 10%;
-    top: 10%;
-}
-
-#home .parallax .p10 {
-    top: 45%;
-    right: 20%;
-}
-
-#home .parallax .p11 {
-    bottom: 10%;
-    right: 10%;
+#about-me .about-info .resume ul {
+    min-width: fit-content;
+    line-height: 2;
 }

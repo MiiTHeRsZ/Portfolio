@@ -1,0 +1,66 @@
+#home .parallax {
+    position: absolute;
+    left: var(--header-width);
+    top: 0;
+    height: 100vh;
+    width: calc(100vw - var(--header-width));
+}
+
+#home .parallax .layer {
+    position: absolute;
+}
+
+#home .parallax .p1 {
+    left: 10%;
+    top: 10%;
+}
+
+#home .parallax .p2 {
+    left: 25%;
+    top: 30%;
+}
+
+#home .parallax .p3 {
+    left: 15%;
+    bottom: 30%;
+}
+
+#home .parallax .p4 {
+    left: 10%;
+    bottom: 10%;
+}
+
+#home .parallax .p5 {
+    left: 45%;
+    top: 10%;
+}
+
+#home .parallax .p6 {
+    left: 40%;
+    bottom: 10%;
+}
+
+#home .parallax .p7 {
+    top: 20%;
+    right: 30%;
+}
+
+#home .parallax .p8 {
+    right: 30%;
+    bottom: 20%;
+}
+
+#home .parallax .p9 {
+    right: 10%;
+    top: 10%;
+}
+
+#home .parallax .p10 {
+    top: 45%;
+    right: 20%;
+}
+
+#home .parallax .p11 {
+    bottom: 10%;
+    right: 10%;
+}
