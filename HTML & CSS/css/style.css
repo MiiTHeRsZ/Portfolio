@@ -122,6 +122,7 @@ main {
 #home .home-info .home-image {
     width: 200px;
     height: 200px;
+    border: 5px double #FFD15C;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -183,12 +184,34 @@ section div h1::first-letter {
     gap: 54px;
 }
 
-#about-me .about-info .resume p {
+#about-me .about-info .resume div {
     background-color: #353353;
-    padding: 28px;
+    padding: 1.2em 2.2em;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#about-me .about-info .resume p {
     text-align: justify;
     line-height: 1.5;
+}
+
+#about-me .about-info .resume div .download {
+    background-color: var(--txt-alternate-color);
+    color: #333;
+    width: fit-content;
+    padding: 16px 24px;
+    border: 2px solid var(--txt-accent-color);
     border-radius: 25px;
+    transition: all .3s ease-in-out;
+}
+
+#about-me .about-info .resume div .download:hover {
+    background-color: var(--txt-accent-color);
+    color: var(--txt-color);
+    transition: all .3s ease-in-out;
 }
 
 #about-me .about-info .resume p::first-letter {
