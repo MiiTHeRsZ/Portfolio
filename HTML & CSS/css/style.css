@@ -49,8 +49,9 @@ html {
 
 body {
     background-color: var(--bg-color);
-    font-family: var(--txt-font);
     color: var(--txt-color);
+    font-family: var(--txt-font);
+    font-weight: bold;
     overflow-x: hidden;
 }
 
@@ -81,7 +82,6 @@ header .menu .list {
     flex-direction: column;
     gap: 24px;
     font-size: 18px;
-    font-weight: bold;
 }
 
 header .menu .list .item a {
@@ -157,7 +157,6 @@ main {
 #home .contact-me {
     background-color: var(--txt-accent-color);
     color: var(--txt-color);
-    font-weight: bold;
     padding: 16px 24px;
     border: 2px solid var(--txt-accent-color);
     border-radius: 25px;
@@ -170,23 +169,23 @@ main {
     transform: scale(1.1);
 }
 
+section h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+    align-self: start;
+}
+
+section h1::first-letter {
+    font-size: 54px;
+    color: var(--txt-accent-color);
+}
+
 #about-me {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 48px;
-}
-
-section div h1 {
-    font-size: 32px;
-    margin-bottom: 32px;
-}
-
-section div h1::first-letter {
-    font-size: 54px;
-    font-weight: bold;
-    color: var(--txt-accent-color);
 }
 
 #about-me .about-info .resume {
@@ -197,7 +196,7 @@ section div h1::first-letter {
 
 #about-me .about-info .resume div {
     background-color: #353353;
-    padding: 1.2em 2.2em;
+    padding: 2.2em 2.2em;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -209,25 +208,18 @@ section div h1::first-letter {
     line-height: 1.5;
 }
 
-#about-me .about-info .resume div p::first-letter {
-    font-weight: bold;
-    font-size: 32px;
-    color: var(--txt-accent-color);
-}
-
 #about-me .about-info .resume div p strong {
-    font-weight: bold;
     color: var(--txt-alternate-color);
 }
 
 #about-me .about-info .resume div .download {
     background-color: var(--txt-accent-color);
     color: var(--txt-color);
-    font-weight: bold;
     display: flex;
     align-items: center;
     gap: 8px;
     width: fit-content;
+    align-self: end;
     padding: 16px 24px;
     border: 2px solid var(--txt-accent-color);
     border-radius: 25px;
@@ -243,4 +235,39 @@ section div h1::first-letter {
 #about-me .about-info .resume ul {
     min-width: fit-content;
     line-height: 2;
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+}
+
+#skills .skills-info {
+    display: flex;
+    gap: 48px;
+}
+
+#skills .skills-info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#skills .skills-info div h3 {
+    font-size: 20px;
+}
+
+#skills .skills-info div ul {
+    background-color: #353353;
+    line-height: 2;
+    padding: 24px;
+    border-radius: 25px;
+}
+
+#skills .skills-info div ul li {
+    text-align: center;
 }
