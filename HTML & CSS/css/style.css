@@ -181,7 +181,12 @@ section h1::first-letter {
     color: var(--txt-accent-color);
 }
 
-#about-me {
+#about-me,
+#skills,
+#qualifications,
+#projects,
+#comments,
+#contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,14 +243,6 @@ section h1::first-letter {
     line-height: 2;
 }
 
-#skills {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 48px;
-}
-
 #skills .skills-info {
     display: flex;
     gap: 48px;
@@ -273,14 +270,6 @@ section h1::first-letter {
     text-align: center;
 }
 
-#qualifications {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 48px;
-}
-
 #qualifications .container {
     display: flex;
     gap: 3rem;
@@ -299,26 +288,55 @@ section h1::first-letter {
     padding: 2.2em 2.2em;
 }
 
-#projects {
+#projects ul {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 48px;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 32px;
 }
 
-#comments {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 48px;
+#projects ul li .card {
+    max-width: 348px;
+    padding: 24px;
+    line-height: 1.5;
+    border-radius: 25px;
+    background-color: var(--bg-accent-color);
 }
 
-#contact {
+#projects ul li .card .project_banner {
+    width: 300px;
+    border-radius: 15px;
+}
+
+#projects ul li .card .project_name {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#comments .container {
+    display: flex;
+    justify-content: center;
+}
+
+#comments .container .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 48px;
+    text-align: center;
+    gap: 16px;
+    max-width: 60%;
+    padding: 48px 96px;
+    border-radius: 25px;
+    background-color: var(--bg-accent-color);
 }
+
+#comments .container .card img {
+    width: 100px;
+}
+
+#comments .container .card .comment_name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#contact {}
